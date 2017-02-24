@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include "iostream"
+#include "TTriad.h"
+#include "TDate.h"
+int _tmain(int argc, _TCHAR* argv[])
+{
+	TTriad triad1;
+	TTriad triad2(180, 170, 91);
+	triad1.Change(180, 170, 90);
+	std::cout << "Comapre Triads:" << std::endl;
+	std::cout << (triad2 > triad1) << std::endl;
+	std::cout << (triad2 = triad1) << std::endl;
+	std::cout << (triad2 < triad1) << std::endl;
+	TDate date1(01, 12, 2015);
+	TDate date2(01, 12, 2013);
+	std::cout << "Comapre Dates:" << std::endl;
+	std::cout << (date1 > date2) <<std::endl;
+	std::cout << (date1 = date2) << std::endl;
+	std::cout << (date1 < date2) << std::endl;
+	system("pause");
+	return 0;
+}
