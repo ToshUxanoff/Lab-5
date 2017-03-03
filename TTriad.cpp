@@ -23,7 +23,7 @@ void TTriad::Change(int a, int b, int c)
 TTriad::~TTriad()
 {
 }
-bool TTriad::operator = (const TTriad& obj)
+bool TTriad::operator ==(const TTriad& obj)
 {
 	if (First == obj.First && Second == obj.Second && Third == obj.Third)
 	{
@@ -53,7 +53,7 @@ bool operator < (const TTriad& a, const TTriad& b)
 	{
 		return false;
 	}
-	else if (first = second)
+	else if (first == second)
 	{
 		return false;
 	}
