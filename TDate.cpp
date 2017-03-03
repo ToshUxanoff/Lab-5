@@ -81,7 +81,7 @@ TDate::TDate(int day, int month, int year)
 		return false;
 	}
 }
-	bool TDate::operator=(const TDate& obj)
+	bool TDate::operator==(const TDate& obj)
 	{
 		if (Third == obj.Third && Second == obj.Second && First == obj.First)
 		{
@@ -96,7 +96,7 @@ TDate::TDate(int day, int month, int year)
 	{
 		TDate date1(a);
 		TDate date2(b);
-		if (date1 = date2)
+		if (date1 == date2)
 		{
 			return false;
 		}
