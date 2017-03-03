@@ -47,7 +47,7 @@ TDate::TDate(int day, int month, int year)
 	Second = month;
 	Third = year;
 }
-	bool TDate::operator>(const TDate &obj)
+	bool TDate::operator>(const TDate &obj) const
 {
 	if (Third > obj.Third)
 	{
@@ -81,7 +81,7 @@ TDate::TDate(int day, int month, int year)
 		return false;
 	}
 }
-	bool TDate::operator==(const TDate& obj)
+	bool TDate::operator==(const TDate& obj) const
 	{
 		if (Third == obj.Third && Second == obj.Second && First == obj.First)
 		{
@@ -92,20 +92,14 @@ TDate::TDate(int day, int month, int year)
 			return false;
 		}
 	}
-	bool operator<(const TDate & a, const TDate & b)
+	bool operator < (const TDate & a, const TDate & b)
 	{
-		TDate date1(a);
-		TDate date2(b);
-		if (date1 == date2)
+		if ((a == b) == false && (a > b) == false)
 		{
-			return false;
-		}
-		else if (date1 > date2)
-		{
-			return false;
+			return true;
 		}
 		else
 		{
-			return true;
+			return false;
 		}
 	}
