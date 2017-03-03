@@ -6,7 +6,7 @@ class TDate :
 public:
 	TDate(int a, int b, int c);
 	bool operator>(const TDate &obj);
-	bool operator=(const TDate &obj);
+	bool operator==(const TDate &obj);
 	void Change(int day, int month, int year);
 	void GetDate();
 protected:
