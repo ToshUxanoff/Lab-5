@@ -7,7 +7,7 @@ public:
 	~TTriad();
 	void Change(int a, int b, int c);
 	bool operator > (const TTriad& obj);
-	bool operator = (const TTriad& obj);
+	bool operator == (const TTriad& obj);
 protected:
 	int First;
 	int Second;
